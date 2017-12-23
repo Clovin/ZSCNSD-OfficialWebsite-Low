@@ -1,0 +1,73 @@
+
+#page9 .word {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    min-height: 50%;
+    padding: 0;
+    padding-bottom: 50px;
+    text-align: center;
+
+    background: rgba(0,0,0,.5);
+}
+
+#page9 .word p{
+    display: inline-block;
+
+    line-height: 3.5em;
+    letter-spacing: .4em;
+    vertical-align: top;
+
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+}
+
+@media (max-width: 306px) {
+    #page9 .word p {
+        line-height: 2em;
+        letter-spacing: .2em;
+    }
+}
+
+/*    page9的动画效果   */
+#page9 {
+    animation: page9 12s linear;
+    animation-fill-mode: forwards;
+}
+#page9 p{
+    opacity: 0;
+}
+#page9 p:nth-last-child(1) {
+    transition: opacity 1s ease 2s;
+}
+#page9 p:nth-last-child(2) {
+    transition: opacity 2s ease 2.5s;
+}
+#page9 p:nth-last-child(3) {
+    transition: opacity 2s ease 3.5s;
+}
+#page9 p:nth-last-child(4) {
+    transition: opacity 2s ease 5.5s;
+}
+#page9 p:nth-last-child(5) {
+    transition: opacity 2s ease 7.5s;
+}
+#page9[class~='active'] {
+    z-index: 1;
+}
+#page9[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page9 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

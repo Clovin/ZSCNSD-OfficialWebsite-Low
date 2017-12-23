@@ -1,0 +1,60 @@
+footer{
+    color:#5f6a6b;
+
+    padding-top: 10px;
+
+    background-color: #eee;
+}
+
+footer ul{
+    padding-left: 0;
+
+    list-style: none;
+}
+
+footer p{
+    color:#5f6a6b;
+
+    margin: 20px auto;
+
+    text-align: center;
+}
+
+footer h2{
+    margin: 20px 0;
+
+    color: #5e696a;
+    font-weight: 700;
+}
+
+/*   让电脑端鼠标移动到标题时正常  */
+footer .col-xs-12 > a:-webkit-any-link{
+    cursor:default !important;
+}
+
+footer a:hover,footer a:focus{
+    text-decoration: none;
+}
+
+/*    手机端的底部的动画效果    */
+@media (max-width: 767px) {
+    footer .row h2{
+        font-size: 25px;
+    }
+    footer .drop{
+        height: 0;
+        max-height: 110px;
+
+        overflow: hidden;
+        transition: all 1s ease;
+    }
+    footer .contact:hover .drop{
+        height: 110px;
+    }
+    footer .tools:hover .drop{
+        height: 110px;
+    }
+    footer .about:hover .drop{
+        height: 110px;
+    }
+}

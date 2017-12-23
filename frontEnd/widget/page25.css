@@ -1,0 +1,55 @@
+
+#page25 .word{
+    position: fixed;
+    top:50%;
+    left: 50%;
+
+    width: 100%;
+
+    transform: translate(-50%,-50%);
+}
+
+#page25 h2{
+    margin-left: 20px;
+}
+
+#page25 p{
+    margin:0;
+    margin-right: 50px;
+
+    text-align: right;
+}
+
+/*   page25的动画效果    */
+#page25 {
+    animation: page25 4.5s linear;
+    animation-fill-mode: forwards;
+}
+#page25 h2 {
+    opacity: 0;
+    transition: opacity 1s ease 2s;
+}
+#page25 p{
+    opacity: 0;
+    transition: opacity 1s ease 3s;
+}
+#page25[class~='active'] {
+    z-index: 1;
+}
+#page25[class~='active'] h2 {
+    opacity: 1;
+}
+#page25[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page25 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

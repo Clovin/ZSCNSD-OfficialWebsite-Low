@@ -1,0 +1,52 @@
+
+#page33 .word{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 5% 4% 10% 4%;
+
+    color: #fff;
+    letter-spacing: .5em;
+
+    background: rgba(0,0,0,.5);
+}
+
+/*    page33的动画效果    */
+#page33 {
+    animation: page33 16s linear;
+    animation-fill-mode: forwards;
+}
+#page33 p {
+    opacity: 0;
+    transition: opacity 1.5s ease 2s;
+}
+#page33 p:nth-child(2){
+    transition: opacity 2s ease 4s;
+}
+#page33 p:nth-child(3){
+    transition: opacity 2s ease 6s;
+}
+#page33 p:nth-child(4){
+    transition: opacity 2s ease 8s;
+}
+#page33 p:nth-child(5){
+    transition: opacity 2s ease 10s;
+}
+#page33[class~='active'] {
+    z-index: 1;
+}
+#page33[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page33 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,56 @@
+
+#page2 .word{
+    letter-spacing: .3em;
+    line-height: 1.8em;
+}
+
+#page2 .right{
+    margin-top: 60px;
+
+    text-align: right;
+    font-size: 9px;
+}
+
+@media (max-height: 483px) {
+    #page2 .right{
+        margin-top: 10px;
+    }
+}
+
+
+/*   page2的动画效果  */
+#page2 {
+    animation: page2 7s linear;
+    animation-fill-mode: forwards;
+}
+#page2 p{
+    opacity: 0;
+    transition: opacity 1.5s ease 2.5s;
+}
+#page2 p:last-child{
+    transition: opacity 1.5s ease 4s;
+}
+#page2 h2{
+    opacity: 0;
+    transition: opacity 1.5s ease 1s;
+}
+#page2[class~='active']{
+    z-index: 1;
+}
+#page2[class~='active'] h2{
+    opacity: 1;
+}
+#page2[class~='active'] p{
+    opacity: 1;
+}
+@keyframes page2 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

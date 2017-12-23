@@ -1,0 +1,48 @@
+
+#page22 p{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+@media (max-height: 480px) {
+    #page22 p{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+}
+
+/*    page22的动画效果   */
+#page22 {
+    animation: page22 7.5s linear;
+    animation-fill-mode: forwards;
+}
+#page22 p {
+    opacity: 0;
+    transition: opacity 1s ease 1.5s;
+}
+#page22 p:nth-child(2){
+    transition: opacity 1s ease 2.5s;
+}
+#page22 p:nth-child(3){
+    transition: opacity 1s ease 3.5s;
+}
+#page22 p:nth-child(4){
+    transition: opacity 1s ease 4.5s;
+}
+#page22[class~='active'] {
+    z-index: 1;
+}
+#page22[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page22 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

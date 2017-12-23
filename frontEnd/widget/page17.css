@@ -1,0 +1,39 @@
+
+#page17 p{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+/*   page17的动画效果   */
+#page17 {
+    animation: page17 6.5s linear;
+    animation-fill-mode: forwards;
+}
+#page17 p {
+    opacity: 0;
+    transition: opacity 1.5s ease 1.5s;
+}
+#page17 p:last-child{
+    transition: opacity 1.5s ease 3s;
+}
+#page17[class~='active'] {
+    z-index: 1;
+}
+#page17[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page17 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    /*95%{*/
+        /*top:0;*/
+    /*}*/
+    100% {
+        opacity: 1;
+        /*top:-100%;*/
+    }
+}

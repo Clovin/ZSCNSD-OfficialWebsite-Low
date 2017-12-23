@@ -1,0 +1,60 @@
+#page14{
+    background: #000;
+}
+
+#page14 .word {
+    width: 100%;
+    padding: 0;
+
+    text-align: center;
+
+    background: rgb(0,0,0);
+}
+
+#page14 .word p{
+    display: inline-block;
+
+    line-height: 3.5em;
+    letter-spacing: .4em;
+    vertical-align: top;
+
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+}
+
+/*   page14的动画效果  */
+#page14 {
+    animation: page14 9s linear;
+    animation-fill-mode: forwards;
+}
+#page14 p {
+    opacity: 0;
+    transition: opacity 1.5s ease 6s;
+}
+#page14 p:nth-child(2){
+    transition: opacity 1.5s ease 4.5s;
+}
+#page14 p:nth-child(3){
+    transition: opacity 1.5s ease 3s;
+}
+#page14 p:nth-child(4){
+    transition: opacity 1.5s ease 1.5s;
+}
+#page14[class~='active'] {
+    z-index: 1;
+}
+#page14[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page14 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

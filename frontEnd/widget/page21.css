@@ -1,0 +1,40 @@
+
+#page21 .photo-group{
+    width: 90%;
+    margin:70px auto 0 auto;
+}
+
+#page21 img{
+    display: inline-block;
+    width: 49%;
+}
+
+/*    page21的动画效果    */
+#page21 {
+    animation: page21 6.5s linear;
+    animation-fill-mode: forwards;
+}
+#page21 p {
+    opacity: 0;
+    transition: opacity 1.5s ease 1.5s;
+}
+#page21 p:last-child{
+    transition: opacity 1.5s ease 3s;
+}
+#page21[class~='active'] {
+    z-index: 1;
+}
+#page21[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page21 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,47 @@
+
+#page7 .top-img{
+    background-color: rgba(0,0,0,.5);
+}
+
+#page7 img{
+    position: relative;
+    z-index: -1;
+}
+
+#page7 .word {
+    position: absolute;
+    bottom: 75px;
+}
+
+#page7 p{
+    margin-top: 7px;
+}
+
+/*   page7的动画效果   */
+#page7 {
+    animation: page7 6.5s linear;
+    animation-fill-mode: forwards;
+}
+#page7 p {
+    bottom:0;
+    opacity: 0;
+    transition: opacity 2s ease 2s,bottom 1s linear 2s;
+}
+#page7[class~='active'] {
+    z-index: 1;
+}
+#page7[class~='active'] p {
+    opacity: 1;
+    bottom: 35px;
+}
+@keyframes page7 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,59 @@
+
+#page32 .word{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 5% 15% 10% 15%;
+
+    color: #fff;
+    letter-spacing: .5em;
+
+    background: rgba(0,0,0,.5);
+}
+
+#page32 p:first-child{
+    margin-bottom: 30px;
+}
+
+#page32 p{
+    margin-top:.4em;
+}
+
+#page32 p:last-child{
+    margin-bottom: 20px;
+}
+
+
+/*     page32的动画效果    */
+#page32 {
+    animation: page32 8.5s linear;
+    animation-fill-mode: forwards;
+}
+#page32 p {
+    opacity: 0;
+    transition: opacity 1.5s ease 4s;
+}
+#page32 p:first-child{
+    transition: opacity 2s ease 1.5s;
+}
+#page32 p:last-child{
+    transition: opacity 1.5s ease 5.5s;
+}
+#page32[class~='active'] {
+    z-index: 1;
+}
+#page32[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page32 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

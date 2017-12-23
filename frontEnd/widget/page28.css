@@ -1,0 +1,43 @@
+
+#page28 .word{
+    position: fixed;
+    top:50%;
+    left: 50%;
+
+    width: 100%;
+
+    transform: translate(-50%,-50%);
+}
+
+#page28 p{
+    margin-right: 50px;
+
+    text-align: right;
+}
+
+/*    page28的动画效果    */
+#page28 {
+    animation: page28 4s linear;
+    animation-fill-mode: forwards;
+}
+#page28 p {
+    opacity: 0;
+    transition: opacity 1s ease 2s;
+}
+#page28[class~='active'] {
+    z-index: 1;
+}
+#page28[class~='active'] p {
+    opacity: 1;
+}
+@keyframes page28 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
