@@ -1,5 +1,7 @@
-# ZSCNSD-OfficialWebsite-Low
+# ZSCNSD-OfficialWebsite-Low(Deprecated)
 The ZSCNSD official website which suited to old browsers.The new one is developing.
+
+The project is deprecated. Please see [the new one](https://github.com/ZSCNetSupportDept/ZSCNSD-OfficialWebsite).
 
 中山学院网络维护科官网，因为后端和[另一个项目](https://github.com/ZSCNetSupportDept/ZSCNSD-AnnualMeeting)结合，构建前请将该项目加入public文件夹，存放方式参照routes的index.js的/annual路由的文件路径
 
